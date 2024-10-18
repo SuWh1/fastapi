@@ -24,9 +24,6 @@ class User(Base):
     password = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
 
-# limitation of sqlalchemy is that after adding or deleting a rows and columns in database, it will not refresh it, so we should close and open it again and again.
-# so we can use 'alembic': tracking
-
 class Vote(Base):
     __tablename__ = "votes"
     

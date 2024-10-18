@@ -5,11 +5,6 @@ from .database import engine
 from .routers import post, user, auth, vote
 from .config import settings
 
-# that codes creates the tables in database
-# models.Base.metadata.create_all(bind=engine)
-# it looks for a tablename in models.py, and if finds it it will do nothing (not refresh it)
-# and for tha3t we can use another libraris, for example: ALEMBIC
-
 app = FastAPI()
 
 origins = ["*"]
@@ -29,7 +24,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Hello to madi"}
-    
-    
-# я красивая принцесса
+    return {"message": "Hello!"}

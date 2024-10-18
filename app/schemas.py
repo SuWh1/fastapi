@@ -2,11 +2,10 @@ from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
 from typing import Optional
 
-# Schema -> is the way we define the structure of request & response
-class PostBase(BaseModel): # extend basemodel
+class PostBase(BaseModel):
     title: str
     content: str    
-    published: bool = True # by default it is True, it will appear if there will no responce
+    published: bool = True
 
 class PostCreate(PostBase):
     pass
@@ -19,7 +18,6 @@ class UserOut(BaseModel):
     class Config:
         orm_mode = True
         
-# for each Session: get/post and other, we can specify which data should we send as a response to user
 class Post(PostBase):
     id: int
     created_at: datetime
