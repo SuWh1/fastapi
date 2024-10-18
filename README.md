@@ -2,14 +2,6 @@
 
 This is a FastAPI application that implements a basic RESTful API with user authentication, post creation, and voting functionalities. It uses PostgreSQL as the database and supports JWT for authentication.
 
-## Table of Contents
-
-- [How to Run](#how-to-run)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Features](#features)
-- [License](#license)
-
 ## How to Run
 
 ### 1. Clone the Repository
